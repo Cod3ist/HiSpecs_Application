@@ -11,6 +11,8 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.grey[900],
 
       appBar: AppBar( /// AppBar for the application
+        leading: buildAccount(),
+
         title: Text('WELCOME'),
         centerTitle: true,
         toolbarHeight: 70.0,
@@ -39,7 +41,12 @@ class Home extends StatelessWidget {
 
     );
   }
-
+  Widget buildAccount(){
+    return IconButton( /// Button to access the account details
+        onPressed: () {  },
+        icon:Icon(Icons.account_circle_outlined, size: 50.0)
+    );
+  }
 
   Widget buildLocation() {
     return Container(
