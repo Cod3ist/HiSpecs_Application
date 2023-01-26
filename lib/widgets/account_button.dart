@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class AccountButton extends StatelessWidget {
-  const AccountButton({Key? key}) : super(key: key);
+  final bool loading;
+  const AccountButton({Key? key, this.loading = false}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
         onPressed: (){},
-        icon: Icon(Icons.account_circle_outlined)
+        icon: loading ? CircularProgressIndicator() : Icon(Icons.account_circle_outlined, size: 50.0,)
     );
   }
 }

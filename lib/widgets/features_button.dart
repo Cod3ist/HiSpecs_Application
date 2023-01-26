@@ -19,13 +19,13 @@ class BoxButton extends StatelessWidget {
           ),
           padding: EdgeInsets.fromLTRB(5.0, 10.0, 5.0, 10.0),
           margin: EdgeInsets.all(10.0),
-          child: Column(
+          child: loading ? CircularProgressIndicator() : Column(
             children: [
               Image.asset(image, height: 120,width: 150),
               SizedBox(height: 15.0),
               Text(title, style: TextStyle(color: Colors.white),)
             ],
-          )
+          ),
       ),
     );
   }
