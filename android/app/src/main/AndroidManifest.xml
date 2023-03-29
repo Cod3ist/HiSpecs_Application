@@ -1,9 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hispecs_pde2101">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+
    <application
         android:label="hispecs_pde2101"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <meta-data
+               android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyD_nUmkvo3gIwjLMbUMVbV9_fFiX3CoFxo"
+        />
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -20,6 +29,7 @@
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

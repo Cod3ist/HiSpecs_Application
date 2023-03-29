@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "576150434395",
+    "project_id": "hispecs-f6b64",
+    "storage_bucket": "hispecs-f6b64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576150434395:android:e2e7bbc305437d07f9457e",
+        "android_client_info": {
+          "package_name": "com.example.hispecs_pde2101"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576150434395-vf0mbgi9j6d7icu4t52bqp8t0ql001i3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxW1neMI8wX7WpSQ-FlSyggUpt-DFGN4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576150434395-vf0mbgi9j6d7icu4t52bqp8t0ql001i3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hispecs_pde2101/widgets/account_button.dart';
 import 'package:hispecs_pde2101/widgets/features_button.dart';
+import 'package:hispecs_pde2101/widgets/location.dart';
 
 class MainPageScreen extends StatefulWidget {
   const MainPageScreen({Key? key}) : super(key: key);
@@ -33,18 +34,21 @@ class _MainPageScreenState extends State<MainPageScreen> {
                 Row(
                     children: <Widget>[
                       SizedBox(width: 20.0),
-                      BoxButton(title: 'LOCATION', image: 'images/location.jpg', onTap: () {  },), ///Placing the Location Widget
-                      SizedBox(width: 20.0),
-                      BoxButton(title: 'ACTIVITIES', image: 'images/activities.jpg', onTap: (){})///Placing the Activities Widget
+                      BoxButton(title: 'LOCATION', image: 'images/location.jpg', onTap: () {
+                          Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const MapSample()));
+                        },), ///Placing the Location Widget
+                      SizedBox(width: 10.0),
+                      BoxButton(title: 'ACTIVITIES', image: 'images/activities.jpg', onTap: (){  })///Placing the Activities Widget
                     ]
                 ),
                 SizedBox(height: 20.0),
                 Row(
                     children: <Widget>[
                       SizedBox(width: 20.0),
-                      BoxButton(title: 'ACCESSIBILITIES', image: 'images/accessibilities.jpg', onTap: () {  },), ///Placing the Location Widget
-                      SizedBox(width: 20.0),
-                      BoxButton(title: 'DISPLAY SETTINGS', image: 'images/display_settings.jpg', onTap: (){})///Placing the Activities Widget
+                      BoxButton(title: '', image: 'images/accessibilities.jpg', onTap: () {  },), ///Placing the Location Widget
+                      SizedBox(width: 10.0),
+                      BoxButton(title: 'DISPLAY SETTINGS', image: 'images/display_settings.jpg', onTap: (){  })///Placing the Activities Widget
                     ]
                 ),
               ]
