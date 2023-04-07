@@ -83,6 +83,7 @@ class MapSampleState extends State<MapSample> {
     return new Scaffold(
       appBar: AppBar(
         title: Text("Google Maps"),
+        backgroundColor: Colors.grey[900],
       ),
       body: Column(
         children: [

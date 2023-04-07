@@ -45,9 +45,9 @@ class _MainPageScreenState extends State<MainPageScreen> {
                 Row(
                     children: <Widget>[
                       SizedBox(width: 20.0),
-                      BoxButton(title: 'ACCESSIBILITIES', image: 'images/accessibilities.jpg', onTap: () {  },), ///Placing the Location Widget
-                      SizedBox(width: 20.0),
-                      BoxButton(title: 'DISPLAY SETTINGS', image: 'images/display_settings.jpg', onTap: (){})///Placing the Activities Widget
+                      BoxButton(title: '', image: 'images/accessibilities.jpg', onTap: () {  },), ///Placing the Location Widget
+                      SizedBox(width: 10.0),
+                      BoxButton(title: 'DISPLAY SETTINGS', image: 'images/display_settings.jpg', onTap: (){  })///Placing the Activities Widget
                     ]
                 ),
               ]
