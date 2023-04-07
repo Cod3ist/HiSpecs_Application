@@ -21,7 +21,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
       backgroundColor: Colors.grey[900],
 
       appBar: AppBar( /// AppBar for the application
-        leading: AccountButton(),
+        leading: AccountButton(account: widget.account,),
         title: Text('WELCOME'),
         centerTitle: true,
         toolbarHeight: 70.0,
@@ -49,7 +49,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
                 Row(
                     children: <Widget>[
                       SizedBox(width: 20.0),
-                      BoxButton(title: 'BLUETOOTH', image: 'images/bluetooth.png', onTap: () {FlutterBlueApp(account: widget.account);},), ///Placing the Bluetooth Widget
+                      BoxButton(title: 'BLUETOOTH', image: 'images/bluetooth.png', onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterBlueApp(account: widget.account)));},), ///Placing the Bluetooth Widget
                       SizedBox(width: 10.0),
                       BoxButton(title: 'DISPLAY SETTINGS', image: 'images/display_settings.jpg', onTap: (){  })///Placing the Display Settings Widget
                     ]
