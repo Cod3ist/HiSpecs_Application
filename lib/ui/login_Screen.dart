@@ -109,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
       loading = true;
     });
     _auth.signInWithEmailAndPassword(email: emailController.text, password: passwordController.text.toString()).then((value){ //check user authentication
-      Navigator.push(context,MaterialPageRoute(builder: (context) => MainPageScreen()));
+      Navigator.push(context,MaterialPageRoute(builder: (context) => MainPageScreen(account: value.user!.uid.toString(), DeviceConnected: 'null',)));
       setState(() {
         loading = false;
       });
