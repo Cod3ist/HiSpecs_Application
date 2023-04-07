@@ -1,15 +1,21 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hispecs_pde2101/ui/splash_screen.dart';
-import 'package:hispecs_pde2101/widgets/account_button.dart';
-import 'package:hispecs_pde2101/widgets/features_button.dart';
+import 'firebase_options.dart';
 
-void main() => runApp(MaterialApp(home: Home()));
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(Home());
+}
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SplashScreen();
+    return const MaterialApp(
+      home: SplashScreen(),
+    );
   }
 }

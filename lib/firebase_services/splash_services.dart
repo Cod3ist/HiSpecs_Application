@@ -11,11 +11,7 @@ class SplashServices{
     final auth = FirebaseAuth.instance;
     final user = auth.currentUser;
 
-    if (user != null){
-      Timer(Duration(seconds: 4), () => Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen())));
-    } else {
-      Timer(Duration(seconds: 4), () => Navigator.push(context, MaterialPageRoute(builder: (context) => MainPageScreen())));
-    }
+    Timer(Duration(seconds: 4), () => Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen())));
 
   }
 
