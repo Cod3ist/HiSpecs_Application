@@ -51,7 +51,6 @@ class _MainPageScreenState extends State<MainPageScreen> {
           ),
         ),
       ),
-
     );
   }
 }
