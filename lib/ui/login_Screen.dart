@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hispecs_pde2101/MainPage.dart';
-import 'signup_Screen.dart';
+import 'package:hispecs_pde2101/ui/signup_Screen.dart';
 import 'package:hispecs_pde2101/utils/utils.dart';
 import 'package:hispecs_pde2101/widgets/round_button.dart';
 
