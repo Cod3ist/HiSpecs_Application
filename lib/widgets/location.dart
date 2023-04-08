@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
-import 'package:hispecs_pde2101/widgets/location_services.dart';
+import 'location_services.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
-
 
 class MapSample extends StatefulWidget {
   const MapSample({Key? key}) : super(key: key);
@@ -42,7 +41,7 @@ class MapSampleState extends State<MapSample> {
     setState(() {
       _markers.add(
         Marker(markerId: MarkerId("marker"),
-          position: point,
+        position: point,
         ),
       );
     });
@@ -74,7 +73,7 @@ class MapSampleState extends State<MapSample> {
         points: points
             .map(
               (point) => LatLng(point.latitude, point.longitude),
-        ).toList(),
+            ).toList(),
       ),
     );
   }
@@ -131,20 +130,20 @@ class MapSampleState extends State<MapSample> {
           ),
           Expanded(
             child: GoogleMap(
-                mapType: MapType.normal,
-                markers: _markers,
-                polygons: _polygons,
-                polylines: _polylines,
-                initialCameraPosition: _kGooglePlex,
-                onMapCreated: (GoogleMapController controller) {
-                  _controller.complete(controller);
-                },
-                onTap: (point) {
-                  setState(() {
-                    polygonLatLngs.add(point);
-                    _setPolygon();
-                  });
-                }
+              mapType: MapType.normal,
+              markers: _markers,
+              polygons: _polygons,
+              polylines: _polylines,
+              initialCameraPosition: _kGooglePlex,
+              onMapCreated: (GoogleMapController controller) {
+                _controller.complete(controller);
+              },
+              onTap: (point) {
+                setState(() {
+                  polygonLatLngs.add(point);
+                  _setPolygon();
+                });
+              }
             ),
           ),
         ],
@@ -153,12 +152,12 @@ class MapSampleState extends State<MapSample> {
   }
 
   Future<void> _goToPlace(
-      // Map<String, dynamic> place,
-      double lat,
-      double lng,
-      Map<String, dynamic> boundsNe,
-      Map<String, dynamic> boundsSw,
-      ) async {
+    // Map<String, dynamic> place,
+    double lat,
+    double lng,
+    Map<String, dynamic> boundsNe,
+    Map<String, dynamic> boundsSw,
+  ) async {
     // final double lat = place["geometry"]["location"]["lat"];
     // final double lng = place["geometry"]["location"]["lng"];
     final GoogleMapController controller = await _controller.future;
@@ -171,8 +170,8 @@ class MapSampleState extends State<MapSample> {
     controller.animateCamera(
       CameraUpdate.newLatLngBounds(
           LatLngBounds(
-            southwest: LatLng(boundsSw["lat"],boundsSw["lng"]),
-            northeast: LatLng(boundsNe["lat"],boundsNe["lng"]),
+              southwest: LatLng(boundsSw["lat"],boundsSw["lng"]),
+              northeast: LatLng(boundsNe["lat"],boundsNe["lng"]),
           ),
           25),
     );
