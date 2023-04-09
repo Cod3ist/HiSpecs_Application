@@ -80,7 +80,7 @@ class MapSampleState extends State<MapSample> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text("Google Maps"),
         backgroundColor: Colors.grey[900],

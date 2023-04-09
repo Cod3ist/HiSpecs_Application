@@ -25,7 +25,7 @@ class _UserDetailsState extends State<UserDetails> {
         'Name' : _name,
         'Age' : _age,
         'Activities' : {'EnergySpent': "value", 'StepCount':"value"},
-        'Location' : {'time' : "place"},
+        'Location' : {'latitude' : '0', 'longitude':'0'},
         'Visual-Aid' : isSwitched.toString(),
       });
       Navigator.push(context, MaterialPageRoute(builder: (context) => MainPageScreen(account: widget.account, DeviceConnected: 'null',)));

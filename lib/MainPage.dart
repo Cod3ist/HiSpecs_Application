@@ -51,7 +51,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
                       SizedBox(width: 20.0),
                       BoxButton(title: 'BLUETOOTH', image: 'images/bluetooth.png', onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterBlueApp(account: widget.account)));},), ///Placing the Bluetooth Widget
                       SizedBox(width: 10.0),
-                      BoxButton(title: 'DISPLAY SETTINGS', image: 'images/display_settings.jpg', onTap: (){  })///Placing the Display Settings Widget
+                      BoxButton(title: 'DISPLAY SETTINGS', image: 'images/display_settings.jpg', onTap: (){})///Placing the Display Settings Widget
                     ]
                 ),
               ]
