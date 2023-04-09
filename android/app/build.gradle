@@ -53,6 +53,7 @@ android {
 
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true //added
     }
 
     buildTypes {
@@ -68,10 +69,6 @@ flutter {
     source '../..'
 }
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
-
-apply plugin: 'com.android.application'
-// Add this line
 apply plugin: 'com.google.gms.google-services'
 
 dependencies {

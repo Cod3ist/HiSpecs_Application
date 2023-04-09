@@ -12,10 +12,11 @@ class UserDetails extends StatefulWidget {
 }
 
 class _UserDetailsState extends State<UserDetails> {
-  final _formKey = GlobalKey<FormState>();
+final _formKey = GlobalKey<FormState>();
+  bool isSwitched = false;
   late String _name;
   late String _age;
-  final database = FirebaseDatabase.instance.ref('Account');
+  final database = FirebaseDatabase(databaseURL: "https://hispecs-f6b64-default-rtdb.asia-southeast1.firebasedatabase.app/").ref('Account').ref;
 
   void _submitForm() {// Do something with the form data
     if (_formKey.currentState!.validate()) {
@@ -23,13 +24,13 @@ class _UserDetailsState extends State<UserDetails> {
       database.child(widget.account).update({
         'Name' : _name,
         'Age' : _age,
-        'Disease' : 'Null',
-        'HeartRate' : {'value' : 0},
+        'Activities' : {'EnergySpent': "value", 'StepCount':"value"},
+        'Location' : {'latitude' : '0', 'longitude':'0'},
+        'Visual-Aid' : isSwitched.toString(),
       });
-      Navigator.push(context, MaterialPageRoute(builder: (context) => MainPageScreen()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => MainPageScreen(account: widget.account, DeviceConnected: 'null',)));
     }
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,6 +72,21 @@ class _UserDetailsState extends State<UserDetails> {
                             return null;
                           },
                           onSaved: (value) => _age = value!,
+                        ),
+                        SizedBox(height:20,),
+                        Row(
+                          children: [
+                            Text('Visual-Aid'),
+                            SizedBox(width: 20,),
+                            Switch(
+                                value: isSwitched,
+                                onChanged: (value){
+                                  setState(() {
+                                    isSwitched = true;
+                                  });
+                                }
+                            )
+                          ],
                         ),
                         SizedBox(height:50),
                         RoundButton(

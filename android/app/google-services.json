@@ -1,78 +1,35 @@
 {
   "project_info": {
-    "project_number": "949706656115",
-    "firebase_url": "https://dbpde2100-default-rtdb.firebaseio.com",
-    "project_id": "dbpde2100",
-    "storage_bucket": "dbpde2100.appspot.com"
+    "project_number": "576150434395",
+    "firebase_url": "https://hispecs-f6b64-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "hispecs-f6b64",
+    "storage_bucket": "hispecs-f6b64.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:949706656115:android:f57643503030934c2edd06",
-        "android_client_info": {
-          "package_name": "com.example.healthmonitoring"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "949706656115-n86ijhk42aq92nba5lnffj21l1lo0ov2.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDLJE9PkrQikvgLvytSs41af5mD9BRPk6I"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "949706656115-n86ijhk42aq92nba5lnffj21l1lo0ov2.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "949706656115-1k8dmom53espgo6cg99kj8n6qvf0cnb8.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.hispecsPde2101"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:949706656115:android:ce80e4df598787972edd06",
+        "mobilesdk_app_id": "1:576150434395:android:289778526d93c798f9457e",
         "android_client_info": {
           "package_name": "com.example.hispecs_pde2101"
         }
       },
       "oauth_client": [
         {
-          "client_id": "949706656115-n86ijhk42aq92nba5lnffj21l1lo0ov2.apps.googleusercontent.com",
+          "client_id": "576150434395-vf0mbgi9j6d7icu4t52bqp8t0ql001i3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDLJE9PkrQikvgLvytSs41af5mD9BRPk6I"
+          "current_key": "AIzaSyAxW1neMI8wX7WpSQ-FlSyggUpt-DFGN4s"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "949706656115-n86ijhk42aq92nba5lnffj21l1lo0ov2.apps.googleusercontent.com",
+              "client_id": "576150434395-vf0mbgi9j6d7icu4t52bqp8t0ql001i3.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "949706656115-1k8dmom53espgo6cg99kj8n6qvf0cnb8.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.hispecsPde2101"
-              }
             }
           ]
         }

@@ -5,7 +5,7 @@ import 'location_services.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 
 class MapSample extends StatefulWidget {
-  const MapSample({Key? key}) : super(key: key);
+  const MapSample({Key? key});
 
   @override
   State<MapSample> createState() => MapSampleState();
@@ -25,17 +25,16 @@ class MapSampleState extends State<MapSample> {
   int _polygonIdCounter = 1;
   int _polylineIdCounter = 1;
 
-  static const CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(37.42796133580664, -122.085749655962),
-    zoom: 14.4746,
-  );
-
   @override
   void initState() {
     super.initState();
-
-    _setMarker(LatLng(37.42796133580664, -122.085749655962));
+    _setMarker(LatLng(25.279255751525415, 55.33086808447267));
   }
+ 
+  CameraPosition _kStartLocation = CameraPosition(
+    target: LatLng(25.279255751525415, 55.33086808447267),
+    zoom: 14.47,
+  );
 
   void _setMarker(LatLng point) {
     setState(() {
@@ -80,7 +79,7 @@ class MapSampleState extends State<MapSample> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text("Google Maps"),
         backgroundColor: Colors.grey[900],
@@ -134,16 +133,10 @@ class MapSampleState extends State<MapSample> {
               markers: _markers,
               polygons: _polygons,
               polylines: _polylines,
-              initialCameraPosition: _kGooglePlex,
+              initialCameraPosition: _kStartLocation,
               onMapCreated: (GoogleMapController controller) {
                 _controller.complete(controller);
               },
-              onTap: (point) {
-                setState(() {
-                  polygonLatLngs.add(point);
-                  _setPolygon();
-                });
-              }
             ),
           ),
         ],

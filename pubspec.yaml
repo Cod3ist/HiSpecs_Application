@@ -44,6 +44,11 @@ dependencies:
   google_maps_flutter: ^2.2.5
   http: ^0.13.5
   flutter_polyline_points: ^1.0.0
+  location: ^4.4.0
+  cloud_firestore: ^4.5.0
+  permission_handler: ^10.2.0
+  geocoding: ^2.1.0
+  flutter_blue: ^0.8.0
 
 dev_dependencies:
   flutter_test:
@@ -79,6 +84,7 @@ flutter:
     - images/viewactivities.jpg
     - images/accessibilities.jpg
     - images/display_settings.jpg
+    - images/bluetooth.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
