@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hispecs_pde2101/bluetooth/bluetooth.dart';
+import 'package:hispecs_pde2101/displaySettings.dart';
 import 'package:hispecs_pde2101/ui/live_location_settings.dart';
 import 'package:hispecs_pde2101/widgets/account_button.dart';
 import 'package:hispecs_pde2101/widgets/features_button.dart';
@@ -50,7 +51,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
                       SizedBox(width: 20.0),
                       BoxButton(title: 'BLUETOOTH', image: 'images/bluetooth.png', onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterBlueApp(account: widget.account)));},), ///Placing the Bluetooth Widget
                       SizedBox(width: 10.0),
-                      BoxButton(title: 'DISPLAY SETTINGS', image: 'images/display_settings.jpg', onTap: (){  })///Placing the Display Settings Widget
+                      BoxButton(title: 'DISPLAY SETTINGS', image: 'images/display_settings.jpg', onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>DisplayScreen(Device: widget.DeviceConnected)));})///Placing the Display Settings Widget
                     ]
                 ),
               ]
