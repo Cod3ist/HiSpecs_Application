@@ -1,17 +1,20 @@
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:hispecs_pde2101/widgets/location.dart';
 import 'package:location/location.dart' as loc;
 import 'package:permission_handler/permission_handler.dart';
 class LiveLocation extends StatefulWidget {
-  const LiveLocation({super.key});
+  final String account;
+  const LiveLocation({super.key, required this.account});
   @override
   State<LiveLocation> createState() => _LiveLocationState();
 }
 
 class _LiveLocationState extends State<LiveLocation> {
   final loc.Location location = loc.Location();
+  final database = FirebaseDatabase.instance.ref('Account');
   double lati = 0.0; double longi = 0.0;
   StreamSubscription<loc.LocationData>? _locationSubscription;
   @override
@@ -83,9 +86,14 @@ class _LiveLocationState extends State<LiveLocation> {
         "longitude": _locationResult.longitude,
         "name": "Your Address"
         }, SetOptions(merge: true));
+      database.child(widget.account).child('Location').update({
+        'latitude':_locationResult.latitude.toString(),
+        'longitude':_locationResult.longitude.toString()
+      });
     } catch (e) {
       print(e);
     }
+
   }
 
   Future<void> _listenLocation() async {
@@ -101,6 +109,10 @@ class _LiveLocationState extends State<LiveLocation> {
         "longitude": currentlocation.longitude,
         "name": "john"
       }, SetOptions(merge: true));
+      database.child(widget.account).child('Location').update({
+        'latitude':currentlocation.latitude.toString(),
+        'longitude':currentlocation.longitude.toString()
+      });
     });
   }
 

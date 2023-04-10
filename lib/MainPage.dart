@@ -38,7 +38,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
                     children: <Widget>[
                       SizedBox(width: 20.0),
                       BoxButton(title: 'LOCATION', image: 'images/location.jpg', onTap: () {
-                        Navigator.push(context,MaterialPageRoute(builder: (context) => LiveLocation()));
+                        Navigator.push(context,MaterialPageRoute(builder: (context) => LiveLocation(account: widget.account,)));
                       },), ///Placing the Location Widget
                       SizedBox(width: 10.0),
                       BoxButton(title: 'ACTIVITIES', image: 'images/activities.jpg', onTap: (){})///Placing the Activities Widget
