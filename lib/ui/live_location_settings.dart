@@ -84,7 +84,7 @@ class _LiveLocationState extends State<LiveLocation> {
       .set({
         "latitude": _locationResult.latitude,
         "longitude": _locationResult.longitude,
-        "name": "Your Address"
+        "name": "Current Address"
         }, SetOptions(merge: true));
       database.child(widget.account).child('Location').update({
         'latitude':_locationResult.latitude.toString(),
@@ -107,7 +107,7 @@ class _LiveLocationState extends State<LiveLocation> {
       await FirebaseFirestore.instance.collection("location").doc("user1").set({
         "latitude": currentlocation.latitude,
         "longitude": currentlocation.longitude,
-        "name": "john"
+        "name": "Current Address"
       }, SetOptions(merge: true));
       database.child(widget.account).child('Location').update({
         'latitude':currentlocation.latitude.toString(),
